@@ -1,0 +1,10 @@
+# Backend y artefactos de MLflow (se regeneran con train.py)
+mlflow.db
+mlartifacts/
+mlruns/
+# Python / Jupyter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+*.zip

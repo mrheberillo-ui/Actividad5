@@ -1,0 +1,116 @@
+{
+  "dataset": "IBM Telco Customer Churn",
+  "version": "1.1.0",
+  "fuente": "https://raw.githubusercontent.com/IBM/telco-customer-churn-on-icp4d/master/data/Telco-Customer-Churn.csv",
+  "archivo_ini": "datos/datos_ini/Telco-Customer-Churn.csv",
+  "sha256_ini": "16320c9c1ec72448db59aa0a26a0b95401046bef5d02fd3aeb906448e3055e91",
+  "archivo_limpio": "datos/datos_limp/telco_churn_limpio.csv",
+  "sha256_limpio": "7e1b2bdab10d2c738616bdadad3bfd0c33622649033a3348dd60303895c67348",
+  "filas": 7021,
+  "columnas": [
+    "gender",
+    "SeniorCitizen",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod",
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "n_servicios",
+    "anomalia_cargos",
+    "Churn"
+  ],
+  "tasa_churn": 0.2645,
+  "perfil_calidad_ini": {
+    "filas": 7043,
+    "columnas": 21,
+    "nulos_explicitos": 0,
+    "totalcharges_en_blanco": 11,
+    "totalcharges_no_numerico": 11,
+    "ids_duplicados": 0,
+    "duplicados_exactos_sin_id": 22,
+    "duplicados_atributos_sin_objetivo": 40,
+    "valores_fuera_de_dominio": {},
+    "tasa_churn": 0.2654
+  },
+  "bitacora_limpieza": [
+    {
+      "regla": "R1",
+      "descripcion": "Recorte de espacios en columnas de texto",
+      "filas_afectadas": 11,
+      "filas_resultantes": 7043
+    },
+    {
+      "regla": "R2",
+      "descripcion": "Validación de dominios categóricos (sin valores inválidos)",
+      "filas_afectadas": 0,
+      "filas_resultantes": 7043
+    },
+    {
+      "regla": "R3",
+      "descripcion": "TotalCharges convertido a numérico; blancos -> nulo",
+      "filas_afectadas": 11,
+      "filas_resultantes": 7043
+    },
+    {
+      "regla": "R4",
+      "descripcion": "Regla de negocio: tenure = 0 => TotalCharges = 0",
+      "filas_afectadas": 11,
+      "filas_resultantes": 7043
+    },
+    {
+      "regla": "R5",
+      "descripcion": "SeniorCitizen 0/1 -> No/Yes",
+      "filas_afectadas": 7043,
+      "filas_resultantes": 7043
+    },
+    {
+      "regla": "R6",
+      "descripcion": "'No internet/phone service' -> 'No' (7 columnas)",
+      "filas_afectadas": 9838,
+      "filas_resultantes": 7043
+    },
+    {
+      "regla": "R7",
+      "descripcion": "Eliminación de duplicados exactos (sin considerar customerID)",
+      "filas_afectadas": 22,
+      "filas_resultantes": 7021
+    },
+    {
+      "regla": "R8",
+      "descripcion": "Marca de inconsistencia de cargos (|razón-1| > 0.25)",
+      "filas_afectadas": 27,
+      "filas_resultantes": 7021
+    },
+    {
+      "regla": "R9",
+      "descripcion": "Variable derivada n_servicios (0-7)",
+      "filas_afectadas": 7021,
+      "filas_resultantes": 7021
+    },
+    {
+      "regla": "R10",
+      "descripcion": "Objetivo a 1/0 y tipos finales (category, int, float)",
+      "filas_afectadas": 7021,
+      "filas_resultantes": 7021
+    },
+    {
+      "regla": "R11",
+      "descripcion": "Eliminación de customerID",
+      "filas_afectadas": 0,
+      "filas_resultantes": 7021
+    }
+  ],
+  "generado_utc": "2026-10-19T02:51:46Z"
+}

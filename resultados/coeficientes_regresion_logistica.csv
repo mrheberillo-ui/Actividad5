@@ -1,0 +1,28 @@
+,0
+InternetService_No,-1.963827860943385
+tenure,-1.4644725551521298
+Contract_Two year,-1.059369432084036
+MonthlyCharges,-0.9825787179726672
+OnlineSecurity_Yes,-0.5635506165932367
+TechSupport_Yes,-0.5199882006463975
+PaymentMethod_Credit card (automatic),-0.4130166060166588
+InternetService_DSL,-0.38603190412768673
+PaymentMethod_Mailed check,-0.37293390245571145
+Contract_One year,-0.36239667273857074
+OnlineBackup_Yes,-0.3442381530255999
+PaymentMethod_Bank transfer (automatic),-0.32099952966945217
+DeviceProtection_Yes,-0.23108906457101555
+Dependents_Yes,-0.19228460503871048
+PhoneService_Yes,-0.061585435427016576
+PaymentMethod_Electronic check,-0.009665931231570276
+Partner_Yes,0.009968499271340886
+gender_Male,0.017991528066722898
+MultipleLines_Yes,0.09246051589149853
+StreamingTV_Yes,0.1444419682943989
+StreamingMovies_Yes,0.1687204842463253
+SeniorCitizen_Yes,0.24917433752399892
+Contract_Month-to-month,0.30515013544211744
+PaperlessBilling_Yes,0.3390933115388109
+TotalCharges,0.7282758815770486
+n_servicios,0.733721380810198
+InternetService_Fiber optic,1.2332437956911635
